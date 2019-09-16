@@ -80,3 +80,16 @@ print(multiline)
 
 a = "haha\a"
 print(a)
+# 문자열 인덱싱
+a[3]
+  # a[0] 과 a[-0]은 동일 결과
+a[0] 
+a[-0]
+
+# 문자열 슬라이싱
+a = "Life is too short, You need Python"
+b = a[0] + a[5] + a[10]
+print(b)
+  # 끝 번호 미 포함. 끝 번호 비 명기시 끝까지 포함
+  a[0:4]
+  a[1:]
