@@ -93,3 +93,59 @@ print(b)
   # 끝 번호 미 포함. 끝 번호 비 명기시 끝까지 포함
   a[0:4]
   a[1:]
+
+
+a= "20190917Sunny"
+date = a[:8]
+weather = a[8:]
+print(date)
+print(weather)
+
+# 문자열 포매팅
+#  1. 숫자 바로 대입
+"I eat %d apples" %3
+#  2. 문자열 바로 대입
+"I eat %s apples" %"five"
+#  3. 변수 대입
+number = 9
+"I eat %d apples" %number
+#  4. 2개 이상 값 표출
+number = 10
+day = "three"
+"I ate %d apples. so I was sick for %s days." %(number, day)
+##########
+# %s : 문자열 / %c : 문자 / %d : 정수 / %f : 부동 소수 / %o : 8진수 / %x : 16진수 / %% : literal %(문자 '%' 자체)
+##########
+
+# 1. 정렬과 공백
+"%10s" %"hi" #공백 8 , hi 2
+"%-10sjane" %"hi"
+# 2. 소수점
+"%.4f" %3.23136 # 소수점 6부터 올림
+
+
+"""
+문자열 관련 함수
+"""
+# count : 문자 개수 세기
+a = "hobby"
+a.count('b')
+# find : 문자 인덱스 (해당 문자가 여러개일 경우, 맨 처음 나오는 인덱스 리턴 / 문자열에 해당 문자가 없을 경우 -1 리턴)
+a.find('b')
+# index : 문자 인덱스 (find와 다른 점 : 해당 문자가 없을 경우 에러 발생!!)
+a.index('i')
+# join : 문자열의 각 문자 사이에 삽입
+a.join(',,') # 결과 : ',hobby,'
+# upper : 대문자 변환 <-> lower : 소문자 변환
+# lstrip : 왼쪽 공백 제거 <-> rstrip : 오른쪽 공백 제거
+a = "   a h bc"
+a.lstrip()
+# strip : 양쪽 공백 제거
+a = " af ssgsg awf   "
+a.strip()
+# replace : 문자열 바꾸기
+a.replace("a", "Yang")
+# split : 문자열 나누기
+a.split() # 공백 기준(스페이스, 탭, 엔터)
+a = "f,faaf,feafef,fwefa"
+a.split(',') # 나누는 기준 ',' 설정
